@@ -1,1 +1,0 @@
-Learned data preprocessing techniques using R and Python. Learnt how to import liberies, datasets, taking care of missing data, encoding catergorical data, spliting in training and testing sets, and feature scaling
