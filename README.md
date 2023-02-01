@@ -36,6 +36,9 @@ Languages: Python, R
 - [Advertisement Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%203%20Advertisement%20Data%20Logistic%20Regression.ipynb)
 : EDA and Logistic Regression Model for Advertisement data. Can you predict, based on certain features, if a person will click or close an advertisement?
 
+- [Titanic](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Titanic%20Logistic%20Regression%20Predicting%20Survival.ipynb)
+: Aim is to predict survival. Performed some EDA, feature engineering and built a logistic model to predict survival.
+
 ---
 **K Nearest Neighbours**
 
