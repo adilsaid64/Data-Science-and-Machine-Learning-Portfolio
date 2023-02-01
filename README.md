@@ -10,13 +10,13 @@ Languages: Python, R
 ---
 **Exploratory Data Analysis**
 - [991 Calls](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%201%20EDA%20911%20Calls%20Data.ipynb)
-    - Ananlysing 911 calls in the USA.
+ :Ananlysing 911 calls in the USA.
 
 - [US Road Accidents Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/USA%20Accidents/US_Accidents_Project_Exploratoy_Data_Analysis.ipynb)
-    - Some EDA of the data set about USA accidents and looking to find intresting insights, and practice data visiulization techniques.
-    
+ :Some EDA of the data set about USA accidents and looking to find intresting insights, and practice data visiulization techniques.
+   
 - [New York 2015 Tree Cencus Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/New%20York%202015%20Tree%20Cencus%20Data/2015_Street_Tree_Cencus_Tree_data_in_New_York.ipynb)
-    - Some EDA on a tree cencus data from New York. Finding intresting insights, data cleaning, and feature enginering.
+ :Some EDA on a tree cencus data from New York. Finding intresting insights, data cleaning, and feature enginering.
 
 ---
 **Financial Time Series Analysis**
