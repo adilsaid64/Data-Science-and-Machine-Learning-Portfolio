@@ -6,6 +6,8 @@ It includes tutorials, exercises, projects and coursework I have completed using
 
 Languages: Python, R
 
+Courses Completed: [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/)
+
 Projects include:
 1. Exploratory Data Analysis
 2. Financial Time Series Analysis
