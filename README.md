@@ -28,11 +28,23 @@ Linear Regression
 Logistic Regression
     - [Advertisement Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%203%20Advertisement%20Data%20Logistic%20Regression.ipynb)
   
-5. K Nearest Neighbours
-6. Decision Trees and Random Forests
-7. Support Vector Machines
-8. K Means Clustering
-9. Principle Component Analysis
-10. Natural Language Processing
+K Nearest Neighbours
 
-Sometimes GitHub has errors rendering notebooks. So they can be seen via this link too: https://nbviewer.org/github/adilsaid64/.
+---
+Decision Trees and Random Forests
+
+---
+Support Vector Machines
+
+---
+K Means Clustering
+
+---
+Principle Component Analysis
+
+---
+Natural Language Processing
+
+---
+
+Sometimes GitHub has errors rendering notebooks. So they can be seen via this link too [nbviewer](https://nbviewer.org/github/adilsaid64/).
