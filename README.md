@@ -1,4 +1,4 @@
-# Data-Analysis-and-Machine-Learning
+# Data Analysis and Machine Learning
 
 This repository showcases the skills and knowledge I have attained from my BSc H in Mathematics and online Data Science and Machine Learning courses.
 
