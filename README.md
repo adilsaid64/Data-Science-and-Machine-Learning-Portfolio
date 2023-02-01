@@ -13,8 +13,9 @@ Courses Completed:
 Projects include:
 1. Exploratory Data Analysis
 - [991 Calls](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%201%20EDA%20911%20Calls%20Data.ipynb)
-- 
+
 2. Financial Time Series Analysis
+- [SP500](Time Series SP500 Analysis CW 1 in R.ipynb)
 3. Linear Regression
 4. Logistic Regression
 5. K Nearest Neighbours
