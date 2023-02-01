@@ -18,6 +18,9 @@ Languages: Python, R
 - [New York 2015 Tree Census Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/New%20York%202015%20Tree%20Cencus%20Data/2015_Street_Tree_Cencus_Tree_data_in_New_York.ipynb)
 : Some EDA on a tree census data from New York. Finding interesting insights, data cleaning, and feature engineering.
 
+- [Movie Ratings]()
+: How much can you trust the ratings shown on a movie online? Especially when the same company showing the ratings makes money from selling ticketS? 
+
 ---
 **Financial Time Series Analysis**
 - [SP500](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Time%20Series%20SP500%20Analysis%20CW%201%20in%20R.ipynb)
