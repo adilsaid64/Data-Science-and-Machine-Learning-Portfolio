@@ -1,16 +1,12 @@
 # Data Analysis and Machine Learning Portfolio
 
----
 
 This repository showcases the skills and knowledge I have attained from my BSc H in Mathematics and online Data Science and Machine Learning courses.
 
 It includes tutorials, exercises, projects and coursework I have completed using real-world data sets. The goal is to build up my knowledge, confidence, and experience in this field. I aim to work as a data scientist by mid-2023. 
-
---- 
+ 
 
 Languages: Python, R
-
----
 
 Courses Completed:
 1. [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/)
