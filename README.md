@@ -12,15 +12,17 @@ Courses Completed:
 
 Projects include:
 1. Exploratory Data Analysis
-    1. [991 Calls](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%201%20EDA%20911%20Calls%20Data.ipynb)
+    - [991 Calls](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%201%20EDA%20911%20Calls%20Data.ipynb)
 
 2. Financial Time Series Analysis
-    1. [SP500](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Time%20Series%20SP500%20Analysis%20CW%201%20in%20R.ipynb)
+    - [SP500](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Time%20Series%20SP500%20Analysis%20CW%201%20in%20R.ipynb)
 
 3. Linear Regression
-    1. [Ecommerce Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%202%20Ecommerce%20Linear%20Regression.ipynb)
+    - [Ecommerce Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%202%20Ecommerce%20Linear%20Regression.ipynb)
 
 4. Logistic Regression
+    - [Advertisement Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%203%20Advertisement%20Data%20Logistic%20Regression.ipynb)
+  
 5. K Nearest Neighbours
 6. Decision Trees and Random Forests
 7. Support Vector Machines
