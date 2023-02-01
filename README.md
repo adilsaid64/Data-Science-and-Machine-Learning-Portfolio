@@ -16,6 +16,9 @@ Courses Completed:
 Exploratory Data Analysis
     - [991 Calls](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%201%20EDA%20911%20Calls%20Data.ipynb)
     
+    - [US Road Accidents Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/tree/main/USA%20Accidents)
+    
+    - [New York 2015 Tree Cencus Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/New%20York%202015%20Tree%20Cencus%20Data/2015_Street_Tree_Cencus_Tree_data_in_New_York.ipynb)
 
 ---
 Financial Time Series Analysis
