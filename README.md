@@ -10,22 +10,24 @@ Languages: Python, R
 ---
 **Exploratory Data Analysis**
 - [991 Calls](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%201%20EDA%20911%20Calls%20Data.ipynb)
+Ananlysing 911 calls in the USA.
 
 - [US Road Accidents Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/USA%20Accidents/US_Accidents_Project_Exploratoy_Data_Analysis.ipynb)
     
 - [New York 2015 Tree Cencus Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/New%20York%202015%20Tree%20Cencus%20Data/2015_Street_Tree_Cencus_Tree_data_in_New_York.ipynb)
+Some EDA of the data set about USA accidents and looking to find intresting insights, and practice data visiulization techniques.
 
 ---
 **Financial Time Series Analysis**
-    - [SP500](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Time%20Series%20SP500%20Analysis%20CW%201%20in%20R.ipynb)
+- [SP500](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Time%20Series%20SP500%20Analysis%20CW%201%20in%20R.ipynb)
 
 ---
 **Linear Regression**
-    - [Ecommerce Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%202%20Ecommerce%20Linear%20Regression.ipynb)
+- [Ecommerce Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%202%20Ecommerce%20Linear%20Regression.ipynb)
 
 ---
 **Logistic Regression**
-    - [Advertisement Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%203%20Advertisement%20Data%20Logistic%20Regression.ipynb)
+- [Advertisement Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%203%20Advertisement%20Data%20Logistic%20Regression.ipynb)
 
 ---
 **K Nearest Neighbours**
