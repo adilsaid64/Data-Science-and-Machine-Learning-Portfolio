@@ -27,7 +27,8 @@ Linear Regression
 ---
 Logistic Regression
     - [Advertisement Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%203%20Advertisement%20Data%20Logistic%20Regression.ipynb)
-  
+
+---
 K Nearest Neighbours
 
 ---
