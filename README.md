@@ -19,7 +19,7 @@ Languages: Python, R
 : Some EDA on a tree census data from New York. Finding interesting insights, data cleaning, and feature engineering.
 
 - [Movie Ratings]()
-: How much can you trust the ratings shown on a movie online? Especially when the same company showing the ratings makes money from selling ticketS? 
+: How much can you trust the ratings shown on a movie online? Especially when the same company showing the ratings makes money from selling tickets? 
 
 ---
 **Financial Time Series Analysis**
