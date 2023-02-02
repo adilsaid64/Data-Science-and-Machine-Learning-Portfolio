@@ -9,7 +9,7 @@ Languages: Python, R
 
 
 
-Contact : [Likedin](https://www.linkedin.com/in/adil-s64/)
+Contact : [Linkedin](https://www.linkedin.com/in/adil-s64/)
 
 Sometimes GitHub has errors rendering notebooks. So they can be seen via this link too [nbviewer](https://nbviewer.org/github/adilsaid64/).
 
