@@ -9,7 +9,7 @@ Languages: Python, R
 
 
 
-Contact : 
+Find me : 
 
 [Linkedin](https://www.linkedin.com/in/adil-s64/)
 
