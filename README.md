@@ -17,7 +17,7 @@ Languages: Python, R
 : How much can you trust the ratings shown on a movie online? Especially when the same company showing the ratings makes money from selling tickets? Is there a conflict of intrest for companies selling movie tickets and displaying movie ratings?
 
 ---
-## Other Projects
+**Other Projects**
 
 **Exploratory Data Analysis**
 
