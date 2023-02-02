@@ -28,6 +28,11 @@ Languages: Python, R
 : A time series analysis and ARCH(1) and GARCH(1,1) Model fitting for the SP500 closing price data.
 
 ---
+**Feature-Engineering and Data Cleaning**
+- [Ames Housing Data]()
+: Performed feature engineering and data cleaning. Dealt with outliers, missing data, and dealing with categorical data.
+
+---
 **Linear Regression**
 - [Ecommerce Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%202%20Ecommerce%20Linear%20Regression.ipynb)
 : An EDA and Linear Regression Model for Eccomerce data. Should the company focus its resources on improving its application or website?
