@@ -14,7 +14,7 @@ Languages: Python, R
 : Used a Support Vector Machine Classifier to classify cancer cells as Malignant or Benign.
 
 - [Movie Ratings](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Machine%20Learning%20&%20Data%20Science%20Masterclass/Moving%20Ratings%20EDA.ipynb)
-: How much can you trust the ratings shown on a movie online? Especially when the same company showing the ratings makes money from selling tickets? Is there a conflict of intrest for companies selling movie tickets and displaying movie ratings?
+: An EDA Project. How much can you trust the ratings shown on a movie online? Especially when the same company showing the ratings makes money from selling tickets? Is there a conflict of intrest for companies selling movie tickets and displaying movie ratings?
 
 ---
 **Other Projects**
