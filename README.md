@@ -18,7 +18,7 @@ Languages: Python, R
 - [New York 2015 Tree Census Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/New%20York%202015%20Tree%20Cencus%20Data/2015_Street_Tree_Cencus_Tree_data_in_New_York.ipynb)
 : Some EDA on a tree census data from New York. Finding interesting insights, data cleaning, and feature engineering.
 
-- [Movie Ratings]()
+- [Movie Ratings](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Machine%20Learning%20&%20Data%20Science%20Masterclass/Moving%20Ratings%20EDA.ipynb)
 : How much can you trust the ratings shown on a movie online? Especially when the same company showing the ratings makes money from selling tickets? Is there a conflict of intrest for companies selling movie tickets and displaying movie ratings?
 
 ---
