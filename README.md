@@ -8,6 +8,10 @@ It includes tutorials, exercises, projects and coursework I have completed using
 Languages: Python, R
 
 ---
+**My Top Projects**
+
+
+---
 **Exploratory Data Analysis**
 
 - [Movie Ratings](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Machine%20Learning%20&%20Data%20Science%20Masterclass/Moving%20Ratings%20EDA.ipynb)
