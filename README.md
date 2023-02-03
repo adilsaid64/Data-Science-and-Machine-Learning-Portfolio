@@ -19,7 +19,7 @@ Sometimes GitHub has errors rendering notebooks. So they can be seen via this li
 
 ## My Top Projects
 
-### [Breast Cancer Classification](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Machine%20Learning%20Practical:%206%20Real-World%20Applications/Breast%20Cancer%20Classification%20(2).ipynb)
+### [Breast Cancer Classification](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/tree/main/Machine%20Learning%20Practical:%206%20Real-World%20Applications/Breast%20Cancer%20Classification)
 
 Used a Support Vector Machine Classifier to classify cancer cells as Malignant or Benign.
 
@@ -27,7 +27,7 @@ Used a Support Vector Machine Classifier to classify cancer cells as Malignant o
 
 **Skills:** Machine Learning, Model Evaluation, Optimization, Classification
 
-### [Movie Ratings](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Machine%20Learning%20&%20Data%20Science%20Masterclass/Moving%20Ratings%20EDA.ipynb)
+### [Movie Ratings](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/tree/main/Python%20for%20Machine%20Learning%20%26%20Data%20Science%20Masterclass/Movie%20Rating)
     
 An EDA Project. How much can you trust the ratings shown on a movie online? Especially when the same company showing the ratings makes money from selling tickets? Is there a conflict of intrest for companies selling movie tickets and displaying movie ratings?
 
@@ -65,7 +65,7 @@ Final Year University Project...(soon)
 
 ---
 **Linear Regression**
-- [Ecommerce Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Project%202%20Ecommerce%20Linear%20Regression.ipynb)
+- [Ecommerce Data](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/tree/main/Python%20for%20Data%20Science%20and%20Machine%20Learning%20Bootcamp/Linear%20Regression%20Ecommerce%20Data)
 : An EDA and Linear Regression Model for Eccomerce data. Should the company focus its resources on improving its application or website?
 
 ---
