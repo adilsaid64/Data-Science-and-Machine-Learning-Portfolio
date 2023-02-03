@@ -25,7 +25,7 @@ Used a Support Vector Machine Classifier to classify cancer cells as Malignant o
 
 **Result:** Built a model that achieves 97% accuracy.
 
-**Skills:** Machine Learning, Model Evaluation, Optimization
+**Skills:** Machine Learning, Model Evaluation, Optimization, Classification
 
 ### [Movie Ratings](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Machine%20Learning%20&%20Data%20Science%20Masterclass/Moving%20Ratings%20EDA.ipynb)
     
@@ -33,7 +33,7 @@ An EDA Project. How much can you trust the ratings shown on a movie online? Espe
 
 **Result:** Found out that the company was over rating movies.
  
-**Skills:** Exploratory Data Analysis, Problem Solving, Visulisation
+**Skills:** Exploratory Data Analysis, Problem Solving, Visulisation, Python Pandas and Seaborn
 
 
 ### [Bayesian Spatial Analysis]() 
