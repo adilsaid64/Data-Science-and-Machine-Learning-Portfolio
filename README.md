@@ -22,7 +22,7 @@ Sometimes GitHub has errors rendering notebooks. So they can be seen via this li
 
 - [Breast Cancer Classification](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Machine%20Learning%20Practical:%206%20Real-World%20Applications/Breast%20Cancer%20Classification%20(2).ipynb)
 
-    - Used a Support Vector Machine Classifier to classify cancer cells as Malignant or Benign.
+Used a Support Vector Machine Classifier to classify cancer cells as Malignant or Benign.
     - Result: Built a model that achieves 97% accuracy.
     - Skills: Machine Learning, Model Evaluation, Optimization
 
