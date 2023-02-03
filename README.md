@@ -29,7 +29,7 @@ Sometimes GitHub has errors rendering notebooks. So they can be seen via this li
 - [Movie Ratings](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Machine%20Learning%20&%20Data%20Science%20Masterclass/Moving%20Ratings%20EDA.ipynb)
     - An EDA Project. How much can you trust the ratings shown on a movie online? Especially when the same company showing the ratings makes money from selling tickets? Is there a conflict of intrest for companies selling movie tickets and displaying movie ratings?
     - Result: Found out that the company was over rating movies.
-    - Skills: EDA, Daya Analysis, Problem Solving
+    - Skills: EDA, Data Analysis, Problem Solving
 
 
 - [Bayesian Spatial Analysis]()
