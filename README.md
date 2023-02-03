@@ -30,7 +30,7 @@ Sometimes GitHub has errors rendering notebooks. So they can be seen via this li
     
     An EDA Project. How much can you trust the ratings shown on a movie online? Especially when the same company showing the ratings makes money from selling tickets? Is there a conflict of intrest for companies selling movie tickets and displaying movie ratings?
     - **Result:** Found out that the company was over rating movies.
-    - **Skills:** EDA, Data Analysis, Problem Solving
+    - **Skills:** Exploratory Data Analysis, Problem Solving, Visulisation
 
 
 - [Bayesian Spatial Analysis]() 
