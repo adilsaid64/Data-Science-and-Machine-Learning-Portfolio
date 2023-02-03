@@ -23,8 +23,9 @@ Sometimes GitHub has errors rendering notebooks. So they can be seen via this li
 
 Used a Support Vector Machine Classifier to classify cancer cells as Malignant or Benign.
 
-    - **Result:** Built a model that achieves 97% accuracy.
-    - **Skills:** Machine Learning, Model Evaluation, Optimization
+**Result:** Built a model that achieves 97% accuracy.
+
+**Skills:** Machine Learning, Model Evaluation, Optimization
 
 - [Movie Ratings](https://github.com/adilsaid64/Data-Science-and-Machine-Learning-Portfolio/blob/main/Python%20for%20Machine%20Learning%20&%20Data%20Science%20Masterclass/Moving%20Ratings%20EDA.ipynb)
     
