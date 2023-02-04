@@ -48,10 +48,87 @@ STARS | Number of stars presented on Fandango.com
 RATING |  The Fandango ratingValue for the film, as pulled from the HTML of each page. This is the actual average score the movie obtained.
 VOTES | number of people who had reviewed the film at the time we pulled it.
 
+----
+
+**Import libraries:**
+
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+%matplotlib inline
+```
 
 ## Part Two: Exploring Fandango Displayed Scores versus True User Ratings
 
 Let's first explore the Fandango ratings to see if our analysis agrees with the article's conclusion.
+
+
+```python
+fandango = pd.read_csv("fandango_scrape.csv")
+```
+
+**Explore the DataFrame Properties and Head.**
+
+
+```python
+fandango.head()
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FILM</th>
+      <th>STARS</th>
+      <th>RATING</th>
+      <th>VOTES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Fifty Shades of Grey (2015)</td>
+      <td>4.0</td>
+      <td>3.9</td>
+      <td>34846</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Jurassic World (2015)</td>
+      <td>4.5</td>
+      <td>4.5</td>
+      <td>34390</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>American Sniper (2015)</td>
+      <td>5.0</td>
+      <td>4.8</td>
+      <td>34085</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Furious 7 (2015)</td>
+      <td>5.0</td>
+      <td>4.8</td>
+      <td>33538</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Inside Out (2015)</td>
+      <td>4.5</td>
+      <td>4.5</td>
+      <td>15749</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 
 
@@ -62,6 +139,96 @@ RATING : True rating on a movies page.
 VOTES : # of user votes
 
 
+```python
+fandango.info()
+```
+
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 504 entries, 0 to 503
+    Data columns (total 4 columns):
+     #   Column  Non-Null Count  Dtype  
+    ---  ------  --------------  -----  
+     0   FILM    504 non-null    object 
+     1   STARS   504 non-null    float64
+     2   RATING  504 non-null    float64
+     3   VOTES   504 non-null    int64  
+    dtypes: float64(2), int64(1), object(1)
+    memory usage: 15.9+ KB
+
+
+
+```python
+fandango.describe()
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STARS</th>
+      <th>RATING</th>
+      <th>VOTES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>504.000000</td>
+      <td>504.000000</td>
+      <td>504.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>3.558532</td>
+      <td>3.375794</td>
+      <td>1147.863095</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1.563133</td>
+      <td>1.491223</td>
+      <td>3830.583136</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>3.500000</td>
+      <td>3.100000</td>
+      <td>3.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>4.000000</td>
+      <td>3.800000</td>
+      <td>18.500000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>4.500000</td>
+      <td>4.300000</td>
+      <td>189.750000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>5.000000</td>
+      <td>5.000000</td>
+      <td>34846.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
 **Let's explore the relationship between popularity of a film and its rating.**
 
 
@@ -69,12 +236,202 @@ VOTES : # of user votes
 sns.scatterplot(x ="RATING", y = "VOTES", data = fandango)
 ```
 
+
+
+
     
 ![png](output_16_1.png)
     
 
 
+**Calculate the correlation between the columns:**
+
+
+```python
+fandango.corr()
+```
+
+
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STARS</th>
+      <th>RATING</th>
+      <th>VOTES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>STARS</th>
+      <td>1.000000</td>
+      <td>0.994696</td>
+      <td>0.164218</td>
+    </tr>
+    <tr>
+      <th>RATING</th>
+      <td>0.994696</td>
+      <td>1.000000</td>
+      <td>0.163764</td>
+    </tr>
+    <tr>
+      <th>VOTES</th>
+      <td>0.164218</td>
+      <td>0.163764</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+We see that the correlation between Stars and Rating are not perfect. 0.995 is still very high, however there is some difference between them.
+
+**Assuming that every row in the FILM title column has the same format:**
+
+    Film Title Name (Year)
+    
+**Create a new column that is able to strip the year from the title strings and set this new column as YEAR**
+
+
+```python
+fandango["YEAR"] = fandango["FILM"].apply(lambda film: film.split(" ")[-1].strip("()"))
+
+fandango
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FILM</th>
+      <th>STARS</th>
+      <th>RATING</th>
+      <th>VOTES</th>
+      <th>YEAR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Fifty Shades of Grey (2015)</td>
+      <td>4.0</td>
+      <td>3.9</td>
+      <td>34846</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Jurassic World (2015)</td>
+      <td>4.5</td>
+      <td>4.5</td>
+      <td>34390</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>American Sniper (2015)</td>
+      <td>5.0</td>
+      <td>4.8</td>
+      <td>34085</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Furious 7 (2015)</td>
+      <td>5.0</td>
+      <td>4.8</td>
+      <td>33538</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Inside Out (2015)</td>
+      <td>4.5</td>
+      <td>4.5</td>
+      <td>15749</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>499</th>
+      <td>Valiyavan (2015)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>500</th>
+      <td>WWE SummerSlam 2015 (2015)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>501</th>
+      <td>Yagavarayinum Naa Kaakka (2015)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>502</th>
+      <td>Yesterday, Today and Tomorrow (1964)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>1964</td>
+    </tr>
+    <tr>
+      <th>503</th>
+      <td>Zarafa (2012)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>2012</td>
+    </tr>
+  </tbody>
+</table>
+<p>504 rows × 5 columns</p>
+</div>
+
+
+
 **How many movies are in the Fandango DataFrame per year?**
+
+
+```python
+fandango["YEAR"].value_counts()
+```
+
+
+
+
+    2015    478
+    2014     23
+    2016      1
+    1964      1
+    2012      1
+    Name: YEAR, dtype: int64
+
+
 
 **Visualize the count of movies per year with a plot:**
 
@@ -82,7 +439,9 @@ sns.scatterplot(x ="RATING", y = "VOTES", data = fandango)
 ```python
 sns.countplot(x = fandango["YEAR"])
 ```
-    
+
+
+
 ![png](output_25_1.png)
     
 
@@ -98,8 +457,7 @@ fandango.nlargest(10,"VOTES")
 
 
 <div>
-<style scoped>
-</style>
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -208,20 +566,9 @@ fandango[fandango["VOTES"]==0]
 ```
 
 
+
+
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -340,22 +687,7 @@ fan_reviewed
 ```
 
 
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -500,20 +832,9 @@ fan_reviewed["STARS_DIFF"] = fan_reviewed["STARS"] - fan_reviewed["RATING"]
 fan_reviewed
 ```
 
+
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -641,6 +962,7 @@ fan_reviewed["STARS_DIFF"] = fan_reviewed["STARS_DIFF"].round(2)
 sns.countplot(data = fan_reviewed, x = "STARS_DIFF", palette="magma")
 ```
 
+
     
 ![png](output_39_2.png)
     
@@ -659,19 +981,6 @@ fan_reviewed[fan_reviewed["STARS_DIFF"]>=1]
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -704,6 +1013,230 @@ fan_reviewed[fan_reviewed["STARS_DIFF"]>=1]
 
 Let's now compare the scores from Fandango to other movies sites and see how they compare.
 
+**Read in the "all_sites_scores.csv" file by running the cell below**
+
+
+```python
+all_sites = pd.read_csv("all_sites_scores.csv")
+```
+
+**Explore the DataFrame columns, info, description.**
+
+
+```python
+all_sites.head()
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FILM</th>
+      <th>RottenTomatoes</th>
+      <th>RottenTomatoes_User</th>
+      <th>Metacritic</th>
+      <th>Metacritic_User</th>
+      <th>IMDB</th>
+      <th>Metacritic_user_vote_count</th>
+      <th>IMDB_user_vote_count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Avengers: Age of Ultron (2015)</td>
+      <td>74</td>
+      <td>86</td>
+      <td>66</td>
+      <td>7.1</td>
+      <td>7.8</td>
+      <td>1330</td>
+      <td>271107</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Cinderella (2015)</td>
+      <td>85</td>
+      <td>80</td>
+      <td>67</td>
+      <td>7.5</td>
+      <td>7.1</td>
+      <td>249</td>
+      <td>65709</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ant-Man (2015)</td>
+      <td>80</td>
+      <td>90</td>
+      <td>64</td>
+      <td>8.1</td>
+      <td>7.8</td>
+      <td>627</td>
+      <td>103660</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Do You Believe? (2015)</td>
+      <td>18</td>
+      <td>84</td>
+      <td>22</td>
+      <td>4.7</td>
+      <td>5.4</td>
+      <td>31</td>
+      <td>3136</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Hot Tub Time Machine 2 (2015)</td>
+      <td>14</td>
+      <td>28</td>
+      <td>29</td>
+      <td>3.4</td>
+      <td>5.1</td>
+      <td>88</td>
+      <td>19560</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+all_sites.info()
+```
+
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 146 entries, 0 to 145
+    Data columns (total 8 columns):
+     #   Column                      Non-Null Count  Dtype  
+    ---  ------                      --------------  -----  
+     0   FILM                        146 non-null    object 
+     1   RottenTomatoes              146 non-null    int64  
+     2   RottenTomatoes_User         146 non-null    int64  
+     3   Metacritic                  146 non-null    int64  
+     4   Metacritic_User             146 non-null    float64
+     5   IMDB                        146 non-null    float64
+     6   Metacritic_user_vote_count  146 non-null    int64  
+     7   IMDB_user_vote_count        146 non-null    int64  
+    dtypes: float64(2), int64(5), object(1)
+    memory usage: 9.2+ KB
+
+
+
+```python
+all_sites.describe()
+```
+
+
+
+
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>RottenTomatoes</th>
+      <th>RottenTomatoes_User</th>
+      <th>Metacritic</th>
+      <th>Metacritic_User</th>
+      <th>IMDB</th>
+      <th>Metacritic_user_vote_count</th>
+      <th>IMDB_user_vote_count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>146.000000</td>
+      <td>146.000000</td>
+      <td>146.000000</td>
+      <td>146.000000</td>
+      <td>146.000000</td>
+      <td>146.000000</td>
+      <td>146.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>60.849315</td>
+      <td>63.876712</td>
+      <td>58.808219</td>
+      <td>6.519178</td>
+      <td>6.736986</td>
+      <td>185.705479</td>
+      <td>42846.205479</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>30.168799</td>
+      <td>20.024430</td>
+      <td>19.517389</td>
+      <td>1.510712</td>
+      <td>0.958736</td>
+      <td>316.606515</td>
+      <td>67406.509171</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>5.000000</td>
+      <td>20.000000</td>
+      <td>13.000000</td>
+      <td>2.400000</td>
+      <td>4.000000</td>
+      <td>4.000000</td>
+      <td>243.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>31.250000</td>
+      <td>50.000000</td>
+      <td>43.500000</td>
+      <td>5.700000</td>
+      <td>6.300000</td>
+      <td>33.250000</td>
+      <td>5627.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>63.500000</td>
+      <td>66.500000</td>
+      <td>59.000000</td>
+      <td>6.850000</td>
+      <td>6.900000</td>
+      <td>72.500000</td>
+      <td>19103.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>89.000000</td>
+      <td>81.000000</td>
+      <td>75.000000</td>
+      <td>7.500000</td>
+      <td>7.400000</td>
+      <td>168.500000</td>
+      <td>45185.750000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>100.000000</td>
+      <td>94.000000</td>
+      <td>94.000000</td>
+      <td>9.600000</td>
+      <td>8.600000</td>
+      <td>2375.000000</td>
+      <td>334164.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 
 
 ### Rotten Tomatoes
@@ -719,9 +1252,13 @@ plt.ylim(0,100)
 plt.xlim(0,100)
 ```
 
+
+
+
     
 ![png](output_50_1.png)
     
+
 
 We see a positive correlation and it suggets that for the most part, Rotten Tomatoes critics and Rotten Tomatoes users agree. There does exist some outliers towards the top left of the plot.
 
@@ -739,19 +1276,7 @@ all_sites.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -863,6 +1388,7 @@ sns.histplot(all_sites["Rotten_diff"], kde = True, bins = 25)
 plt.title("RT Critis - Rt User Score")
 ```
 
+
     
 ![png](output_59_1.png)
     
@@ -934,6 +1460,15 @@ sns.scatterplot(x = "Metacritic", y = "Metacritic_User", data = all_sites)
 plt.ylim(0,10)
 plt.xlim(0,100)
 ```
+
+
+
+
+    (0.0, 100.0)
+
+
+
+
     
 ![png](output_70_1.png)
     
@@ -950,9 +1485,19 @@ Finally let's explore IMDB. Notice that both Metacritic and IMDB report back vot
 sns.scatterplot(x = "Metacritic_user_vote_count", y = "IMDB_user_vote_count", data = all_sites)
 plt.title("Movie vote counts on different platforms")
 ```
+
+
+
+
+    Text(0.5, 1.0, 'Movie vote counts on different platforms')
+
+
+
+
     
 ![png](output_72_1.png)
     
+
 
 **Notice there are two outliers here. The movie with the highest vote count on IMDB only has about 500 Metacritic ratings. What is this movie?**
 
@@ -967,19 +1512,6 @@ all_sites.nlargest(3,"IMDB_user_vote_count")[["FILM", "IMDB_user_vote_count"]]
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1021,19 +1553,6 @@ all_sites.nlargest(3,"Metacritic_user_vote_count")[["FILM", "Metacritic_user_vot
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1083,19 +1602,6 @@ df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1201,6 +1707,34 @@ df.head()
 </div>
 
 
+
+
+```python
+df.info()
+```
+
+    <class 'pandas.core.frame.DataFrame'>
+    Int64Index: 145 entries, 0 to 144
+    Data columns (total 13 columns):
+     #   Column                      Non-Null Count  Dtype  
+    ---  ------                      --------------  -----  
+     0   FILM                        145 non-null    object 
+     1   STARS                       145 non-null    float64
+     2   RATING                      145 non-null    float64
+     3   VOTES                       145 non-null    int64  
+     4   YEAR                        145 non-null    object 
+     5   RottenTomatoes              145 non-null    int64  
+     6   RottenTomatoes_User         145 non-null    int64  
+     7   Metacritic                  145 non-null    int64  
+     8   Metacritic_User             145 non-null    float64
+     9   IMDB                        145 non-null    float64
+     10  Metacritic_user_vote_count  145 non-null    int64  
+     11  IMDB_user_vote_count        145 non-null    int64  
+     12  Rotten_diff                 145 non-null    int64  
+    dtypes: float64(4), int64(7), object(2)
+    memory usage: 15.9+ KB
+
+
 ### Normalize columns to Fandango STARS and RATINGS 0-5 
 
 Notice that RT,Metacritic, and IMDB don't use a score between 0-5 stars like Fandango does. In order to do a fair comparison, we need to *normalize* these values so they all fall between 0-5 stars and the relationship between reviews stays the same.
@@ -1271,19 +1805,6 @@ df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1420,6 +1941,11 @@ df.head()
 
 
 
+
+```python
+
+```
+
 **Now create a norm_scores DataFrame that only contains the normalizes ratings. Include both STARS and RATING from the original Fandango table.**
 
 
@@ -1448,19 +1974,6 @@ norm_scores.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1545,6 +2058,8 @@ ax = sns.kdeplot(data= norm_scores,
            clip = [0,5])
 
 sns.move_legend(ax, "upper left", bbox_to_anchor=(1, 1))
+
+
 ```
 
 
@@ -1565,6 +2080,8 @@ ax = sns.kdeplot(data= norm_scores[["Rt_Norm", "STARS"]],
            clip = [0,5])
 
 sns.move_legend(ax, "upper left", bbox_to_anchor=(1, 1))
+
+
 ```
 
 
@@ -1583,6 +2100,14 @@ plt.figure(figsize=(10,5))
 sns.histplot(norm_scores, bins = 25)
 ```
 
+
+
+
+    <AxesSubplot: ylabel='Count'>
+
+
+
+
     
 ![png](output_98_1.png)
     
@@ -1600,6 +2125,15 @@ All of these are ratings for the same movies. Ideally you would expect all to be
 sns.clustermap(norm_scores, cmap = "magma", col_cluster=False)
 ```
 
+
+
+
+    <seaborn.matrix.ClusterGrid at 0x799fb9645db0>
+
+
+
+
+    
 ![png](output_101_1.png)
     
 
@@ -1607,6 +2141,20 @@ sns.clustermap(norm_scores, cmap = "magma", col_cluster=False)
 Clustering movie ratings based of all sights. We see that Rotten Tomatos criticts seem to be the harshest. In general though, there is an agreement with other movie criticts on what movies are low ratings and what are high. Expect when you look at the ratings on Fandingos sights. They almost dont rate any movie bad. They seem to be pushing up the ratings for these movies.
 
 **Clearly Fandango is rating movies much higher than other sites, especially considering that it is then displaying a rounded up version of the rating. Let's examine the top 10 worst movies. Based off the Rotten Tomatoes Critic Ratings, what are the top 10 lowest rated movies? What are the normalized scores across all platforms for these movies? You may need to add the FILM column back in to your DataFrame of normalized scores to see the results.**
+
+
+```python
+norm_scores.columns
+```
+
+
+
+
+    Index(['STARS', 'RATING', 'Rt_Norm', 'RtU_Norm', 'Meta_Norm', 'MetaU_Norm',
+           'IMDB_Norm'],
+          dtype='object')
+
+
 
 
 ```python
@@ -1620,19 +2168,6 @@ norm_films.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1719,19 +2254,6 @@ worst_films
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1901,19 +2423,6 @@ worst_films[worst_films["FILM"] == "Taken 3 (2015)"].transpose()[1:]
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
